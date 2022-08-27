@@ -37,7 +37,7 @@ Bare minimum this needs to work via CLI for automation. A UI can be built on top
 
 ## Installer (GUI)
 
-1. User downloads a `.exe` file and runs it (made by the builder detailed the above section).
+1. User downloads a `.exe` file and runs it (made by the builder detailed in the above section).
 1. It contains a compressed set of files that it will decompress and place in the `C:\Program Files` (or `C:\Program Files (x86)`) folder.
    * Before placing the decompressed files, check if the folder already exists, and if so, delete the current contents first.
 1. It then checks to see if the required version of NW.js already exists locally.
@@ -61,7 +61,7 @@ Bare minimum this needs to work via CLI for automation. A UI can be built on top
 * The builder will eventually be published as an node module on npm, so that it can be version controlled, installed, and used as a build tool by others.
 * It would be useful to accept a JSON file as the settings input for the builder so they could be stored inside the `package.json`. Then that file can be fed into the CLI as `nw-global-installer ./package.json` or something similar.
 * Not sure exactly where the best place to store the downloaded shared NW.js versions is. Open to suggestions.
-* Would be nice if the windows version also came with an uninstaller.
+* Would be nice if the Windows version also came with an uninstaller.
   * Should have checkbox that says "Remove NW.js 0.57.1 (may be used by other applications)" when uninstalling?
 * May be better to have the desktop/start menu shortcuts point to a small exe that checks the `package.json` file, then checks to see if NW.js is still installed and if not, start downloading/installing it first, then when done, launch the app normally. This would be a sort of self-repairing system in case someone uninstalled a different NW.js based app and removed a shared NW.js install that was still needed. This may be overkill though, as the user could just re-install the software they broke.
 
